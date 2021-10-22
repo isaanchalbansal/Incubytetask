@@ -22,8 +22,12 @@ public class CalcTest {
 	  assertEquals(18, StringCalc.add("4,6,8"));
   }
   @Test
-    public void testwithNewLine(){
-    	assertEquals(6, StringCalc.add("1\n2,3"));
-    }
+  public void testwithNewLine(){
+    assertEquals(6, StringCalc.add("1\n2,3"));
+  }
+  @Test
+  public void testOtherDelimiter(){
+    assertEquals(3, StringCalc.add("//;\n1;2"));
+  }
     
 }
