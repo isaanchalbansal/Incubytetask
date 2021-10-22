@@ -9,5 +9,9 @@ public class CalcTest {
   public void emptyString() {
     assertEquals(0, StringCalc.add(""));
   }
+  @Test
+  public void singleNumber(){
+    assertEquals(1, StringCalc.add("1"));
+  }
     
 }
