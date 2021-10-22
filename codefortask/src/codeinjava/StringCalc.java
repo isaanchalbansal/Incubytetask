@@ -17,18 +17,30 @@ public class StringCalc {
 			return sum(numList);
 		}
     }
+    
     private static String[] splitNumbers(String numbers, String delim){
 	    return numbers.split(delim);
 	}
-        
+
     private static int sum(String[] num){
         int sum = 0;
+        String negative = "";
+
         for(String eachnum : num){
-            sum += convertToInt(eachnum);
-        }
-        return sum;
-    }
-    
+           if(convertToInt(eachnum) < 0){
+               if(negative.equals(""))
+                   negative = eachnum;
+               else
+                   negative += ("," + eachnum);
+           }
+           sum += convertToInt(eachnum);
+       }
+       if(!negative.equals("")){
+           throw new IllegalArgumentException("Negatives not allowed: " + negative);
+       }
+       return sum;
+   }
+
     private static int convertToInt(String nom){
         return Integer.parseInt(nom);
     }   
