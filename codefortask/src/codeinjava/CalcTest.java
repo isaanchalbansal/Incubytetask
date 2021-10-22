@@ -29,5 +29,5 @@ public class CalcTest {
   public void testOtherDelimiter(){
     assertEquals(3, StringCalc.add("//;\n1;2"));
   }
-    
+  
 }
