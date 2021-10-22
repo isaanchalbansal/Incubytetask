@@ -7,9 +7,12 @@ public class StringCalc {
         }
         else if(numbers.contains(",")){
             String[] num = numbers.split(",");
-            return Integer.parseInt(num[0]) + Integer.parseInt(num[1]);
+            return convertToInt(num[0]) + convertToInt(num[1]);
         }
         else
             return 1;
-    }    
+    }
+    private static int convertToInt(String number){
+        return Integer.parseInt(number);
+    }   
 }
