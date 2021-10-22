@@ -7,12 +7,16 @@ public class StringCalc {
         }
         else if(numbers.contains(",")){
             String[] num = numbers.split(",");
-            return convertToInt(num[0]) + convertToInt(num[1]);
+            int sum = 0;
+            for(String eachnum : num){
+                sum += convertToInt(eachnum);
+            }
+            return sum;
         }
-        else
-            return 1;
+        else 
+            return 1; 
     }
-    private static int convertToInt(String number){
-        return Integer.parseInt(number);
+    private static int convertToInt(String nom){
+        return Integer.parseInt(nom);
     }   
 }
