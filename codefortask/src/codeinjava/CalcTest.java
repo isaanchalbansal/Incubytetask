@@ -17,5 +17,9 @@ public class CalcTest {
   public void testTwoStrings(){
     assertEquals(3, StringCalc.add("1,2"));
   }
+  @Test
+  public void testMultipleNumbers(){
+	  assertEquals(18, StringCalc.add("4,6,8"));
+  }
     
 }
